@@ -20,36 +20,24 @@ echo You should have two registry key errors above this line.  You can safly ign
 IF EXIST "%check_xp%" (SET swbf2=%check_xp%)
 IF EXIST "%check_vista_32%" (SET swbf2=%check_vista_32%)
 IF EXIST "%check_vista_64%" (SET swbf2=%check_vista_64%)
-
-echo %W11_EXE_PATH% 
-pause
-
 IF EXIST %W11_EXE_PATH% (
 		set swbf2=%W11_EXE_PATH%
 )
-	
-
-ECHO %swbf2%
-pause
-
 SET swbf2=%swbf2:BattlefrontII.exe=%
-
-ECHO %swbf2%
-pause
 
 IF EXIST %W11_EXE_PATH% (
 
-SET swbf2_0=%swbf2:GameData\=%
+SET swbf2_0=%swbf2:\GameData\=%
 
 SET installed=%swbf2_0%\v1.3patch\settings\installed.txt
 SET hasHud=%swbf2_0%\v1.3patch\settings\hasHud.txt
-SET hasSides=%swbf2_0%\v1.3patch\settings\hasSides.txt"
-SET noAwards=%swbf2_0%\v1.3patch\settings\noAwards.txt"
-SET noColors=%swbf2_0%\v1.3patch\settings\noColors.txt"
+SET hasSides=%swbf2_0%\v1.3patch\settings\hasSides.txt
+SET noAwards=%swbf2_0%\v1.3patch\settings\noAwards.txt
+SET noColors=%swbf2_0%\v1.3patch\settings\noColors.txt
 SET sides=%swbf2%DATA\_LVL_PC\SIDE
 SET lvl=%swbf2%DATA\_LVL_PC
-
-) GOTO SKIPCOMMANDS
+GOTO SKIPCOMMANDS
+)
 
 SET installed=%swbf2%..\v1.3patch\settings\installed.txt
 SET hasHud=%swbf2%..\v1.3patch\settings\hasHud.txt
@@ -167,13 +155,20 @@ copy ".\movie\pre-movie.mvs" "%lvl%\MOVIES\pre-movie.mvs"
 REM install the settings
 echo.
 echo Updating the settings...
+IF EXIST %W11_EXE_PATH% (
+
+SET swbf2_0=%swbf2:\GameData\=%
+mkdir "%swbf2_0%\v1.3patch\settings\"
+GOTO SKIPCOMMANDS2
+)
 mkdir "%swbf2%..\v1.3patch\settings\"
+
+:SKIPCOMMANDS2
 echo This file tells the UnOfficial v1.3 patch's menu system that the v1.3 patch is installed > "%installed%"
 echo This file tells the UnOfficial v1.3 patch's menu system that the custom HUD is being used > "%hasHud%"
 echo This file tells the UnOfficial v1.3 patch's menu system that the custom sides are being used > "%hasSides%"
 echo.
 IF '%1' == '1' GOTO END
-pause
 GOTO MAIN_MENU
 
 
