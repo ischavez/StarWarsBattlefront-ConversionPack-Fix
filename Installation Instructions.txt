@@ -21,7 +21,7 @@ A terminal will come up wth several errors, one of which being "BattlefrontII.ex
 
 2) If you browse your local files on the game in steam, you should now see a couple of new folders. In the "GameData\v1.3patch" folder, there is a broken "menu.bat" file that needs to be replaced with my patched batch file. I have added comments within the batch file that you can take a look at if you want, but all it boils down to is adding a few checks here and there that adapt the script to how Windows11 does stuff. My changes should not affect the original functionality of the script, but I have not tested this to make sure.
 
-3) Run this new "menu.bat" batch file, and the mod should now be applied!
+3) Run this new "menu.bat" batch file and follow the on-screen prompt. The mod should now be applied!
 
 ------------------------------------------------
 
