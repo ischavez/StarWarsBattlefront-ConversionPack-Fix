@@ -1,13 +1,10 @@
+
 @echo off
 title SWBF2 UnOfficial v1.3 Patch r83
 echo.
 
 REM Set this to be the path of your exe. I've only tested this on the steam version.
-SET W11_EXE_PATH="C:\Program Files (x86)\Steam\steamapps\common\Star Wars Battlefront II Classic\GameData\BattlefrontII.exe"
-
-REM Adding a check here for Windows 11.
-echo Checking Windows 11
-IF EXIST %W11_EXE_PATH% (SET check_W11=%W11_EXE_PATH%)
+SET W11_EXE_PATH=C:\Program Files (x86)\Steam\steamapps\common\Star Wars Battlefront II Classic\GameData\BattlefrontII.exe
 
 REM setup all the file/folder paths
 REM delims is a TAB followed by a space
@@ -18,17 +15,29 @@ echo Checking Windows Vista 32bit
 FOR /F "tokens=2* delims=	 " %%A IN ('REG QUERY "HKEY_LOCAL_MACHINE\LucasArts\Star Wars Battlefront II\1.0" /v ExePath') DO SET check_vista_32=%%B
 echo Checking Windows Vista 64bit
 FOR /F "tokens=2* delims=	 " %%A IN ('REG QUERY "HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\LucasArts\Star Wars Battlefront II\1.0" /v ExePath') DO SET check_vista_64=%%B
-
 echo You should have two registry key errors above this line.  You can safly ignore them. 
 
 IF EXIST "%check_xp%" (SET swbf2=%check_xp%)
 IF EXIST "%check_vista_32%" (SET swbf2=%check_vista_32%)
 IF EXIST "%check_vista_64%" (SET swbf2=%check_vista_64%)
-IF EXIST "%check_W11%" (SET swbf2=%check_W11%)
+
+echo %W11_EXE_PATH% 
+pause
+
+IF EXIST %W11_EXE_PATH% (
+		set swbf2=%W11_EXE_PATH%
+)
+	
+
+ECHO %swbf2%
+pause
 
 SET swbf2=%swbf2:BattlefrontII.exe=%
 
-IF EXIST "%check_W11%" (
+ECHO %swbf2%
+pause
+
+IF EXIST %W11_EXE_PATH% (
 
 SET swbf2_0=%swbf2:GameData\=%
 
@@ -57,7 +66,6 @@ SET patch=_v1.3patch
 SET retail=.retail
 
 REM Double check for problems
-
 IF NOT EXIST "%swbf2%BattlefrontII.exe" (
 echo.
 echo.
