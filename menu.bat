@@ -72,12 +72,12 @@ IF '%1' == '1' GOTO install
 echo.
 echo ---- Folders ----
 echo SWBF2's GameData:       %swbf2%
-REM echo LVL folder:  %lvl%
-REM echo Side folder: %sides%
-REM echo Installed:   %installed%
-REM echo Has hud:     %hasHud%
-REM echo Has sides:   %hasSides%
-REM echo No effects:  %noAwards%
+echo LVL folder:  %lvl%
+echo Side folder: %sides%
+echo Installed:   %installed%
+echo Has hud:     %hasHud%
+echo Has sides:   %hasSides%
+echo No effects:  %noAwards%
 echo.
 SET input=
 SET /p input=If these folders seem wrong, type 'n' now to cancel or press Enter to continue: 
