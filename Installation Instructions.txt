@@ -11,7 +11,7 @@ Conversion Pack v2.0 - W11 Fix
 
 Most of the broken parts of these mods come down to broken batch files. They usually point to locations where steam used to save it's games, but it has changed since. The following instructions work on Windows 11 as of 4/27/2024:
 
-1)	When installing Conversion Pack v2.0 Pack, you need to change the installation location to point to the new location that steam stores games. For me, it is at:
+1)	When installing Conversion Pack v2.0 Pack, you need to change the installation location to point to the new location that steam stores games at. For me using W11 on Steam, it is at:
 		C:\Program Files (x86)\Steam\steamapps\common\Star Wars Battlefront II Classic\
 
 A terminal will come up wth several errors, one of which being "BattlefrontII.exe=BattlefrontII.exe" does not exist. This mod was last updated to work on Windows Vista, so several registry keys it looks for and the location of the EXE file are different and thus "not found".
@@ -19,7 +19,7 @@ A terminal will come up wth several errors, one of which being "BattlefrontII.ex
 	All that being said, you can ignore these errors and continue onward for now.
 
 
-2) If you browse your local files on the game in steam, you should now see a couple of new folders. In the "GameData\v1.3patch" folder, there is a broken "menu.bat" file that needs to be replaced with my patched batch file. I have added comments within the batch file that you can take a look at if you want, but all it boils down to is adding a few checks here and there that adapt the script to how Windows11 does stuff. My changes should not affect the original functionality of the script, but I have not tested this to make sure.
+2) If you browse your local files on the game in steam, you should now see a couple of new folders. In the "v1.3patch" folder, there is a broken "menu.bat" batch file that needs to be replaced with my patched batch file. I have added comments within the batch file that you can take a look at if you want, but all it boils down to is adding a few checks here and there that adapt the script to how Windows11 does stuff. My changes should theoretically not affect the original functionality of the script, but I have not yet tested this to make sure.
 
 3) Run this new "menu.bat" batch file and follow the on-screen prompt. The mod should now be applied!
 
@@ -38,7 +38,7 @@ A terminal will come up wth several errors, one of which being "BattlefrontII.ex
 ------------------------------------------------
 TLDR
 ------------------------------------------------
-Conversion Pack v2.0
+Conversion Pack v2.0 - W11 Fix
 ------------------------------------------------
 
 1) When installing Conversion Pack v2.0 Pack, change the path to where steam saves it at now, ignoring all errors:
