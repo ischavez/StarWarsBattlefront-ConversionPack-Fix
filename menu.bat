@@ -3,32 +3,18 @@
 title SWBF2 UnOfficial v1.3 Patch r83
 echo.
 
+REM ## ASK IF PLAYING ON GOG OR STEAM, THEN CHECK WHERE THE FILE SHOULD BE TO ENSURE THE GAME DATA IS INSTALLED BEFORE PROCEEDING
+
 REM Set this to be the path of your exe. I've only tested this on the steam version, as you can see in this file path.
 SET "W11_EXE_PATH=C:\Program Files (x86)\Steam\steamapps\common\Star Wars Battlefront II Classic\GameData\BattlefrontII.exe"
+REM SET "W11_EXE_PATH=GOG PATH
 
 REM setup all the file/folder paths
 REM delims is a TAB followed by a space
 
-echo Checking Windows XP
-FOR /F "tokens=2* delims=	 " %%A IN ('REG QUERY "HKEY_LOCAL_MACHINE\SOFTWARE\LucasArts\Star Wars Battlefront II\1.0" /v ExePath') DO SET check_xp=%%B
-echo Checking Windows Vista 32bit
-FOR /F "tokens=2* delims=	 " %%A IN ('REG QUERY "HKEY_LOCAL_MACHINE\LucasArts\Star Wars Battlefront II\1.0" /v ExePath') DO SET check_vista_32=%%B
-echo Checking Windows Vista 64bit
-FOR /F "tokens=2* delims=	 " %%A IN ('REG QUERY "HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\LucasArts\Star Wars Battlefront II\1.0" /v ExePath') DO SET check_vista_64=%%B
-echo You should have two registry key errors above this line, 3 if you are on W11.  You can safly ignore them. 
-
-
-
-REM Add the W11 check at the beginning of this strong of IF statements. Should preserve backwards compatibility functionality since it would get overwritten on one of the next lines. Script doesn't work if cariable is in quotations.
 SET swbf2=%W11_EXE_PATH%
-IF EXIST "%check_xp%" (SET swbf2=%check_xp%)
-IF EXIST "%check_vista_32%" (SET swbf2=%check_vista_32%)
-IF EXIST "%check_vista_64%" (SET swbf2=%check_vista_64%)
-
 SET swbf2=%swbf2:BattlefrontII.exe=%
 
-REM Due to inline ".." not going back 1 directory anymore, this temporary variable accounts for it while preserving the original variable for use down the line.
-IF EXIST %W11_EXE_PATH% (
 SET swbf2_0=%swbf2:\GameData\=%
 SET installed=%swbf2_0%\v1.3patch\settings\installed.txt
 SET hasHud=%swbf2_0%\v1.3patch\settings\hasHud.txt
@@ -37,21 +23,7 @@ SET noAwards=%swbf2_0%\v1.3patch\settings\noAwards.txt
 SET noColors=%swbf2_0%\v1.3patch\settings\noColors.txt
 SET sides=%swbf2%DATA\_LVL_PC\SIDE
 SET lvl=%swbf2%DATA\_LVL_PC
-REM Added this line and the label a few lines down to jump to, only if using W11.
-GOTO SKIPCOMMANDS
-)
 
-SET installed=%swbf2%..\v1.3patch\settings\installed.txt
-SET hasHud=%swbf2%..\v1.3patch\settings\hasHud.txt
-SET hasSides=%swbf2%..\v1.3patch\settings\hasSides.txt
-SET noAwards=%swbf2%..\v1.3patch\settings\noAwards.txt
-SET noColors=%swbf2%..\v1.3patch\settings\noColors.txt
-SET sides=%swbf2%DATA\_LVL_PC\SIDE
-SET lvl=%swbf2%DATA\_LVL_PC
-
-:SKIPCOMMANDS
-
-REM
 SET patch=_v1.3patch
 SET retail=.retail
 
@@ -68,7 +40,7 @@ pause
 GOTO END
 )
 
-REM auto-install if this batch file is called with the frist argument as '1'
+REM auto-install if this batch file is called with the first argument as '1'
 IF '%1' == '1' GOTO install
 
 echo.
