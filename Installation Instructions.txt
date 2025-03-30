@@ -1,49 +1,134 @@
-Files we will need:
+Prerequisite Original mod files we will need from the Mod DB page:
 
-- Conversion Pack v2.0
-- SWBF2-v1.3patch-r130.zip
+- ConvoPackInstaller.exe (https://www.moddb.com/mods/star-wars-battlefront-conversion-pack/downloads/star-wars-battlefront-conversion-pack-v20)
+- SWBF2-v1.3patch-r130.exe (https://www.gamefront.com/games/star-wars-battlefront-2/file/unofficial-star-wars-battlefront-ii-v1-3-patch-1)
 
 
 TLDRs at the bottom.
 
+------------------------------------------------------------------------------------------------
+Details installation instructions:
 ------------------------------------------------
-Conversion Pack v2.0 - W11 Fix (Steam Only)
+Conversion Pack v2.0 - W11 Fix / Installation (Steam Only)
 ------------------------------------------------
 
 Most of the broken parts of these mods come down to broken batch files. They usually point to locations where steam used to save it's games, but it has changed since. The following instructions work on Windows 11 as of 4/27/2024:
 
-1)	Run "ConvoPackInstaller.exe" from the Conversion Pack v2.0 Pack Moddb page. When prompted to set the download destination location, change it to the location that steam stores games at. For me using W11 on Steam, it is at:
-		C:\Program Files (x86)\Steam\steamapps\common\Star Wars Battlefront II Classic\
+1)	Run "ConvoPackInstaller.exe" from the Conversion Pack v2.0 Pack Moddb page. When prompted to set the download destination location, change it to the location that steam stores this game's GameData at. For me using W11 on Steam, it is at:
+		C:\Program Files (x86)\Steam\steamapps\common\Star Wars Battlefront II Classic\GameData
 
 A terminal will come up wth several errors, one of which being "BattlefrontII.exe=BattlefrontII.exe" does not exist. This mod was last updated to work on Windows Vista, so several registry keys it looks for and the location of the EXE file are different and thus "not found".
 
 	All that being said, you can ignore these errors and continue onward for now.
 
-2) If you browse your local files on the game in steam, you should now see a couple of new folders. In the "v1.3patch" folder, there is a broken "menu.bat" batch file that needs to be replaced with my patched batch file. I have added comments within the batch file that you can take a look at if you want, but all it boils down to is adding a few checks here and there that adapt the script to how Windows11 does stuff for Steam.
+2) If you browse your local files on the game in steam, you should now see a couple of new folders under GameData. In the "GameData\v1.3patch" folder, there is a broken "menu.bat" batch file that needs to be replaced with my patched batch file. I have added comments within the batch file that you can take a look at if you want, but all it boils down to is adding a few checks here and there that adapt the script to how Windows11 does stuff for Steam.
 
 3) Run this new "menu.bat" batch file and follow the on-screen prompt.
+	Verify that the list of folders looks correct.
+	Press 1 when prompted, to download the "UnOfficial v1.3 Patch", then 0 to exit.
 
-4) Unzip the "SWBF2-v1.3patch-r130.zip" folder in the same folder as earlier:
-		C:\Program Files (x86)\Steam\steamapps\common\Star Wars Battlefront II Classic\
+Mods should now work once you launch the game! I'd still strongly recommend applying the "v1.3 Patch" patch, as it fixes some stuff & is easy to install.
 
-5) 
+------------------------------------------------
+UnOfficial v1.3 Patch r130 (WIP)
+------------------------------------------------
+
+4) Run the "SWBF2-v1.3patch-r130.exe" file with the install location being the same folder as earlier:
+	C:\Program Files (x86)\Steam\steamapps\common\Star Wars Battlefront II Classic\
 
 
- mod should now be applied!
+5) Run my "00_FixScript_SWBF2-v1.3patch-r130.bat" batch file to fix issues with the ionstal location that the mod places file in.
+	Moves files from
+		Star Wars Battlefront II Classic\GameData\addon\AAA-v1.3patch
+		to
+		Star Wars Battlefront II Classic\addon\
+
+	Moves files from
+		Star Wars Battlefront II Classic\GameData\data\_lvl_pc\
+		to
+		Star Wars Battlefront II Classic\data\_lvl_pc\
+
+
+ Mods should now be applied!
+
+------------------------------------------------------------------------------------------------
 
 ------------------------------------------------
 
+
+
+
+
+
+
+------------------------------------------------------------------------------------------------
+Basic description of the mods & how to verify that they are installed:
 ------------------------------------------------
+Conversion Pack v2.0 (ConvoPackInstaller.exe)
+
+	This is the base Star wars Battlefront Conversion Pack v2.0 originally uploaded on Sep 21st, 2008.
+	"The Conversion Pack is a comprehensive add-on to the original Battlefront II. It adds 25 new maps - including all of the maps from Battlefront 1 not originally featured in Battlefront 2, 5 new gamemodes, a new era, and a substantial amount of expanded unit content to the original game. "
+
+	25 maps:
+		1.		Alderaan
+		2.		Bespin: Cloud City		SWBF1
+		3.		Bespin: Platforms		SWBF1
+		4.		Concord Dawn
+		5.		Endar Spire
+		6.		Geonosis: Spire			SWBF1
+		7.		Haruun Kai
+		8.		Kamino: Tipoca City		SWBF1
+		9.		Kashyyyk: Docks			SWBF1
+		10.		Kashyyyk: Islands		SWBF1
+		11.		Methlyn
+		12.		Naboo: Plains			SWBF1
+		13.		Naboo: Prototype
+		14.		Ord Ibanna
+		15.		Rattatak
+		16.		Raxus Prime				Clone Wars
+		17.		Rhen Var: Citadel		SWBF1
+		18.		Rhen Var: Harbour		SWBF1
+		19.		Space Bespin
+		20.		Space Geonosis
+		21.		Space Mustafar
+		22.		Space Rakata Prime
+		23.		Space Rhen Var
+		24.		Tatooine: Dune Sea 		SWBF1
+		25.		Yavin 4: Arena			SWBF1
 
 
+	5 gamemodes: (Mod DB page says 5//6, but I list all the new ones selectable in instant action here below)
+		
+		1.		Deathmatch
+		2.		Hero CTF
+		3.		Holocron
+		4.		King of the Hill
+		5.		Order 66
+		6.		Uber
+		7.		Team DeathMatch
+		8.		Team Dogfight
 
 
+				Assault was renamed to Hero Assault / Space Assault
+				Campaign missions are also available
+				Classic Conquest is similar to Conquest from SWBF1
+				
+	New era:
+		1.		KotOR
 
+	Unit Content:(WIP)
 
-
+	Verify correct installation by:
+		Opening instant action & confirming that Alderaan is the first map available. If so, I presume that all the other maps have been added also.
 
 
 ------------------------------------------------
+UnOfficial v1.3 Patch r130 (SWBF2-v1.3patch-r130.exe)
+
+	This is the unofficial v1.3 patch originally uploaded on Nov 4th, 2008.
+	"What we have here is the culmanation of Zerted's work over the past few years, combined with the visual upgrades of the "Unofficial 1.2 Patch" into one big mod - the "Unofficial 1.3 Patch." This mod gives both players and modders unparalleled control over what goes into and comes out of their Star Wars Battlefront 2."
+
+------------------------------------------------------------------------------------------------
 TLDR Instructions
 ------------------------------------------------
 Conversion Pack v2.0 - W11 Fix

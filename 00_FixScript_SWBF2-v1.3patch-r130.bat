@@ -15,14 +15,15 @@ SET dataFolder="C:\Program Files (x86)\Steam\steamapps\common\Star Wars Battlefr
 
 IF EXIST %addonFolder% (
 	echo %addonFolder%
-	move /Y "C:\Program Files (x86)\Steam\steamapps\common\Star Wars Battlefront II Classic\GameData\addon\AAA-v1.3patch" "C:\Program Files (x86)\Steam\steamapps\common\Star Wars Battlefront II Classic\addon\"
+	rem move /Y "C:\Program Files (x86)\Steam\steamapps\common\Star Wars Battlefront II Classic\GameData\addon\AAA-v1.3patch" "C:\Program Files (x86)\Steam\steamapps\common\Star Wars Battlefront II Classic\addon\"
+	robocopy "C:\Program Files (x86)\Steam\steamapps\common\Star Wars Battlefront II Classic\GameData\addon\AAA-v1.3patch " "C:\Program Files (x86)\Steam\steamapps\common\Star Wars Battlefront II Classic\addon\ " /move /e
 	rmdir  "C:\Program Files (x86)\Steam\steamapps\common\Star Wars Battlefront II Classic\GameData\addon"
 ) ELSE (echo "Addon folder location already fixed.")
 
 IF EXIST %dataFolder% (
 	echo %dataFolder%
-	rem move "C:\Program Files (x86)\Steam\steamapps\common\Star Wars Battlefront II Classic\GameData\data\_lvl_pc" "C:\Program Files (x86)\Steam\steamapps\common\Star Wars Battlefront II Classic\data\"
-	rem rmdir "C:\Program Files (x86)\Steam\steamapps\common\Star Wars Battlefront II Classic\GameData\data"
+	robocopy "C:\Program Files (x86)\Steam\steamapps\common\Star Wars Battlefront II Classic\GameData\data\_lvl_pc\ " "C:\Program Files (x86)\Steam\steamapps\common\Star Wars Battlefront II Classic\data\_lvl_pc\ " /move /e
+	rmdir "C:\Program Files (x86)\Steam\steamapps\common\Star Wars Battlefront II Classic\GameData\data"
 ) ELSE (echo "Data folder location already fixed")
 
 pause
