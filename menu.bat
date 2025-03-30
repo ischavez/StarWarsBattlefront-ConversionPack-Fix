@@ -15,13 +15,6 @@ REM delims is a TAB followed by a space
 SET swbf2=%W11_EXE_PATH%
 SET swbf2=%swbf2:BattlefrontII.exe=%
 
-SET swbf2_0=%swbf2:\GameData\=%
-rem SET installed=%swbf2_0%\v1.3patch\settings\installed.txt
-rem SET hasHud=%swbf2_0%\v1.3patch\settings\hasHud.txt
-rem SET hasSides=%swbf2_0%\v1.3patch\settings\hasSides.txt
-rem SET noAwards=%swbf2_0%\v1.3patch\settings\noAwards.txt
-rem SET noColors=%swbf2_0%\v1.3patch\settings\noColors.txt
-
 SET installed=%swbf2%v1.3patch\settings\installed.txt
 SET hasHud=%swbf2%v1.3patch\settings\hasHud.txt
 SET hasSides=%swbf2%v1.3patch\settings\hasSides.txt
@@ -136,13 +129,7 @@ copy ".\movie\pre-movie.mvs" "%lvl%\MOVIES\pre-movie.mvs"
 REM install the settings
 echo.
 echo Updating the settings...
-IF EXIST %W11_EXE_PATH% (
-
-SET swbf2_0=%swbf2:\GameData\=%
-mkdir "%swbf2_0%\v1.3patch\settings\"
-GOTO SKIPCOMMANDS2
-)
-mkdir "%swbf2%..\v1.3patch\settings\"
+mkdir "%swbf2%\v1.3patch\settings\"
 
 :SKIPCOMMANDS2
 echo This file tells the UnOfficial v1.3 patch's menu system that the v1.3 patch is installed > "%installed%"

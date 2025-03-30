@@ -3,12 +3,11 @@
 title Script Fixing the "SWBF2-v1.3patch-r130.exe" download locations being wrong
 echo.
 
-
 REM Hard-coded locations for the game on steam
 SET addonfolder_Final="C:\Program Files (x86)\Steam\steamapps\common\Star Wars Battlefront II Classic\addon"
 SET dataFolder_Final="C:\Program Files (x86)\Steam\steamapps\common\Star Wars Battlefront II Classic\data"
 
-SET addonFolder="C:\Program Files (x86)\Steam\steamapps\common\Star Wars Battlefront II Classic\GameData\addon\AAA-v1.3patch"
+SET addonFolder="C:\Program Files (x86)\Steam\steamapps\common\Star Wars Battlefront II Classic\AAA-v1.3patch"
 SET dataFolder="C:\Program Files (x86)\Steam\steamapps\common\Star Wars Battlefront II Classic\GameData\data\_lvl_pc"
 
 

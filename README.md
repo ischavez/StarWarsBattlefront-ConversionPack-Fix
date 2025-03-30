@@ -5,5 +5,12 @@ I tried running this mod after downloading it from MOD DB (link below), but it d
 
 I'll be adding a text file with explanations of the fixes for those curious. This project is a work in progress. (CURRENTLY ONLY WORKS FOR W11)
 
+
+Progress:
+- Conversion Pack v2.0 Clean Installation (Steam Only)			[DONE]
+- Conversion Pack v2.0 Clean Uninstallation (Steam Only)		[WIP]
+- Conversion Pack v2.0 Clean Full Menu functionality			[WIP]
+- UnOfficial v1.3 Patch r130 Installation						[DONE]
+
 ---------------------------------------------------------------------------------------------------------------------------------------
 I do not take ownership of any of these mod packs. All of the original files can be found here: https://www.moddb.com/mods/star-wars-battlefront-conversion-pack/downloads
