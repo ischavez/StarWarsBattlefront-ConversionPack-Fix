@@ -1,6 +1,7 @@
 
 @echo off
 title Script Fixing the "SWBF2-v1.3patch-r130.exe" download locations being wrong
+REM DEPRECATED
 echo.
 
 REM Hard-coded locations for the game on steam
