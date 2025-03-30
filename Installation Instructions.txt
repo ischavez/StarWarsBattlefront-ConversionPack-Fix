@@ -92,7 +92,7 @@ Conversion Pack v2.0 (ConvoPackInstaller.exe)
 		25.		Yavin 4: Arena			SWBF1
 
 
-	5 gamemodes: (Mod DB page says 5//6, but I list all the new ones selectable in instant action here below)
+	5 gamemodes: (Mod DB page says 5/6, but I list all the new ones selectable in instant action here below)
 		
 		1.		Deathmatch
 		2.		Hero CTF
@@ -127,6 +127,31 @@ UnOfficial v1.3 Patch r130 (SWBF2-v1.3patch-r130.exe)
 
 	This is the unofficial v1.3 patch originally uploaded on Nov 4th, 2008.
 	"What we have here is the culmanation of Zerted's work over the past few years, combined with the visual upgrades of the "Unofficial 1.2 Patch" into one big mod - the "Unofficial 1.3 Patch." This mod gives both players and modders unparalleled control over what goes into and comes out of their Star Wars Battlefront 2."
+
+	"Capturing the drama and epic conflict of Star Wars, Battlefront II brings the fight online. Attention to detail and scale make this game a joy to behold, with 16 incredible new battlefronts such as Utapau, Mustafar and the space above Coruscant, as well as the Death Star interior and Tantive IV, Princess Leia's blockade runner seen at the beginning of the original Star Wars."
+
+	16 maps:
+		1.
+		2. 
+		3. 
+		4.
+		5.
+		6.
+		7.
+		8.
+		9.
+		10.
+		11.
+		12.
+		13.
+		14.
+		15.
+		16.
+
+
+	Adds the "versus" option under the Galactic Conquest tab.
+	Ass the "Campaign List" option under the Campaign tab.
+
 
 ------------------------------------------------------------------------------------------------
 TLDR Instructions
