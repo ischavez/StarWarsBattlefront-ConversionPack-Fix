@@ -11,6 +11,8 @@ Progress:
 - Conversion Pack v2.0 Clean Uninstallation (Steam Only)		[WIP]
 - Conversion Pack v2.0 Clean Full Menu functionality			[WIP]
 - UnOfficial v1.3 Patch r130 Installation						[DONE]
+- Conversion Pack v2.2 Patch Installation 						[DONE]
+- KotOR Galactic Conquest Mod Installation + Fix 				[DONE]
 
 ---------------------------------------------------------------------------------------------------------------------------------------
 I do not take ownership of any of these mod packs. All of the original files can be found here: https://www.moddb.com/mods/star-wars-battlefront-conversion-pack/downloads

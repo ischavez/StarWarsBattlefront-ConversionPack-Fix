@@ -1,10 +1,15 @@
-Prerequisite Original mod files we will need from the Mod DB page:
+Prerequisite Original mod files we will need:
 
 - ConvoPackInstaller.exe 			(https://www.moddb.com/mods/star-wars-battlefront-conversion-pack/downloads/star-wars-battlefront-conversion-pack-v20)
+
 - SWBF2-v1.3patch-r130.exe 			(https://www.moddb.com/games/star-wars-battlefront-ii/downloads/unofficial-v13-patch-r130)
 	Alternate:
 		SWBF2-v1.3patch-r130.zip	(https://www.mediafire.com/file/9y5g82s5h2lgdj5/SWBF2-v1.3patch-r130.zip)
-		SWBF2-v1.3patch-r130.exe 	(https://www.mediafire.com/file/yrab2a52t9cbj76/SWBF2-v1.3patch-r130.exe)
+		SWBF2-v1.3patch-r130.exe 	(https://www.mediafire.com/file/yrab2a52t9cbj76/SWBF2-v1.3patch-r130.exe)]
+
+- ConPack2.2Patch.exe 				(https://www.moddb.com/mods/star-wars-battlefront-conversion-pack/downloads/star-wars-battlefront-conversion-pack-v22-patch)
+
+- KotORGC2.exe 						(https://www.moddb.com/mods/star-wars-battlefront-conversion-pack/downloads/kotor-galactic-conquest)
 
 
 TLDRs at the bottom.
@@ -41,11 +46,28 @@ UnOfficial v1.3 Patch r130 Installation
 
 Mods should now work once you launch the game!
 
-------------------------------------------------------------------------------------------------
 
 ------------------------------------------------
+Conversion Pack v2.2 Patch Installation
+------------------------------------------------
+
+5) Run the "ConPack2.2Patch.exe" file with the install location being:
+	C:\Program Files (x86)\Steam\steamapps\common\Star Wars Battlefront II Classic\GameData
 
 
+------------------------------------------------
+KotOR Galactic Conquest Mod Installation 
+------------------------------------------------
+
+Conversion pack 2.0 + v1.3 patch are prerequisites to this.
+
+This mod pack creates a folder named "KotORGC1" at the specified location, with subdirectories GameData\addon & GameData\DATA.
+You can either choose your desktop (or anywhere else) as the destination & manually extract the relevant files to place them in the correct folders, or you can follow the steps here to fix it with my batch file.
+
+6) Run the "KotORGC2.exe" file with the install location being:
+	C:\Program Files (x86)\Steam\steamapps\common\Star Wars Battlefront II Classic
+
+7) Run my "00_FixScript_SWBF2_KotORGC2.bat" batch file to automatically fix the error with where the installation process palces the files.
 
 
 
@@ -61,8 +83,9 @@ Conversion Pack v2.0 (ConvoPackInstaller.exe)
 
 
 	This is the base Star wars Battlefront Conversion Pack v2.0 mod originally uploaded on Sep 21st, 2008.
+	It looks like this exe includes the v1.3 patch
 
-	"The Conversion Pack is a comprehensive add-on to the original Battlefront II. It adds 25 new maps - including all of the maps from Battlefront 1 not originally featured in Battlefront 2, 5 new gamemodes, a new era, and a substantial amount of expanded unit content to the original game. "
+	"The Conversion Pack is a comprehensive add-on to the original Battlefront II. It adds 25 new maps - including all of the maps from Battlefront 1 not originally featured in Battlefront 2, 5 new gamemodes, a new era, and a substantial amount of expanded unit content to the original game."
 
 	25 maps:
 		1.		Alderaan
@@ -84,6 +107,8 @@ Conversion Pack v2.0 (ConvoPackInstaller.exe)
 		17.		Rhen Var: Citadel		SWBF1
 		18.		Rhen Var: Harbour		SWBF1
 		19.		Space Bespin
+				Space Coruscant
+				Space Endor
 		20.		Space Geonosis
 		21.		Space Mustafar
 		22.		Space Rakata Prime
@@ -150,7 +175,44 @@ UnOfficial v1.3 Patch r130 (SWBF2-v1.3patch-r130.exe)
 
 
 	Adds the "versus" option under the Galactic Conquest tab.
-	Ass the "Campaign List" option under the Campaign tab.
+	Adds the "Campaign List" option under the Campaign tab.
+
+	Verify correct installation by:
+		XXXXXXXXXXXXXXXXXX
+
+
+------------------------------------------------
+Conversion Pack v2.2 Patch (ConPack2.2Patch.exe)
+------------------------------------------------
+
+	https://www.moddb.com/mods/star-wars-battlefront-conversion-pack/downloads/kotor-galactic-conquest
+
+	Full list of changes can be found at "GameData\ConPack2.2PatchChanges\Changelist.rtf" after installation.
+
+
+
+	Verify correct installation by:
+		Checking if "patch.lvl" & "patch2.lvl" are present in \GameData\addon\BF1\data\_LVL_PC\SIDE
+		Checking if the "GameData\ConPack2.2PatchChanges" folder exists & has 2 rtf files
+
+
+------------------------------------------------
+KotOR Galactic Conquest (KotORGC2.exe)
+------------------------------------------------
+
+	https://www.moddb.com/mods/star-wars-battlefront-conversion-pack/downloads/kotor-galactic-conquest
+
+	This is the KotOR Galactic Conquest addon originally uploaded on Jan 10th, 2009.
+	"Add-on to Conversion Pack 2.0 that allows you to play the "Galactic Conquest" gamemode with the KotOR era."
+
+	Galactic Conquest addedd:
+		KotOR
+			Jedi Civil Was 		(Old Republic GC)
+			Advent of the Sith 	(Sith Empire GC)
+
+	Verify correct installation by:
+		Open Galactic Conquest & confirm that you can see the "Jedi Civil War" entry.
+
 
 
 ------------------------------------------------------------------------------------------------
@@ -171,3 +233,11 @@ UnOfficial v1.3 Patch r130 Installation
 ------------------------------------------------
 
 1) Run the exe & use path C:\Program Files (x86)\Steam\steamapps\common\Star Wars Battlefront II Classic\
+
+
+------------------------------------------------
+KotOR Galactic Conquest Mod Installation
+------------------------------------------------
+
+
+1) 
