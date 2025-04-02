@@ -14,7 +14,7 @@ Here is a list of all the mods addressed in this repo:
 
 I'll be adding a text file with explanations of the fixes for those curious. This project is a work in progress. (CURRENTLY ONLY WORKS FOR W11)
 
-Checkout the README for both detailed installation instructions & a TLDR.
+Checkout the "Installation Instructions.txt" file for both detailed installation instructions & a TLDR.
 
 Progress:
 - Conversion Pack v2.0 Clean Installation (Steam Only)			[DONE]
